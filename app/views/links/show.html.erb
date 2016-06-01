@@ -1,0 +1,22 @@
+
+
+<p>
+  <strong>Title:</strong>
+  <%= @link.title %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @link.url %>
+</p>
+
+  <% if @link.comments.any?%>
+    <h3><%=@link.comments.count%>comments</h3>
+    <% @link.comments.each do |comment| %>
+      <%= render 'comments/comment', elem: comment %>
+    <% end %>
+  <% end %>
+
+<%=render 'comments/form' %>
+<%= link_to 'Edit', edit_link_path(@link) ,class: 'btn btn-info'%> 
+<%= link_to 'Back', links_path, class: 'btn btn-info' %>

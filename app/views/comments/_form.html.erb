@@ -1,0 +1,6 @@
+<div class="col-md-6">
+ <%= simple_form_for [@link, Comment.new] do |f| %>
+    <%= f.text_field :body, class: "form_control" %>
+    <%= f.button :submit, class: 'btn btn-primary'%>
+<% end %>
+</div>

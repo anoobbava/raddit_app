@@ -1,0 +1,8 @@
+<div>
+  <p><%= elem.body %></p>
+  <p class= 'small'>submitted by <%= time_ago_in_words(elem.created_at) %>ago by 
+  <%= elem.user.name %></p>
+  <% if elem.user == current_user %>
+    <%= link_to 'delete comment', link_comment_path(@link, elem), method: :delete %>
+  <% end %>
+</div>
