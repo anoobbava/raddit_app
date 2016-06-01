@@ -23,6 +23,10 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'pry'
 end
+
+gem :production do
+  gem 'pg'
+end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
